@@ -1,0 +1,265 @@
+.hero {
+    margin: 0 auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+    background-color: #2f303a;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url('../images/fon.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &__title {
+    margin: 0 auto;
+            font-weight: 900;
+            font-size: 44px;
+            line-height: 1.36;
+            text-align: center;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: $white-color;
+        }
+}
+
+  
+
+.hero__button { border-radius: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    width: 216px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: $white-color;
+    background-color: $accent-color;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*backdrop*/
+.backdrop {
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+    &__modal {
+            min-width: 528px;
+            min-height: 581px;
+            background-color: $white-color;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    overflow: visible;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden .backdrop__modal {
+    transform: translate(-50%, -50%);
+}
+
+.backdrop__button {
+    width: 30px;
+    height: 30px;
+    background-color: $white-color;
+    border-radius: 50%;
+    @include flex(center, center, flex);
+    border: 1px solid #0000001a;
+    padding: 0;
+    margin-left: auto;
+    margin-top: 8px;
+    margin-right: 8px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    &:hover .backdrop__icon{
+            fill: $accent-color;
+        }
+    &:focus .backdrop__icon {
+            fill: $accent-color;
+        }
+}
+.backdrop__icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+/*form-modal*/
+.form-modal {
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    &__title {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 1.15;
+            text-align: center;
+            letter-spacing: 0.03em;
+            margin-top: 0;
+            margin-bottom: 12px;
+            color: $title-color;
+        }
+}
+
+.form-modal__content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.form-modal__label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: $primary-color;
+    text-align: start;
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+.form-modal__input {
+    width: 448px;
+    height: 40px;
+    padding-left: 30px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 30px;
+    &:hover~.form-modal__icon {
+            fill: $accent-color;
+        }
+        &:focus~.form-modal__icon {
+            fill: $accent-color;
+        }
+}
+
+.form-modal__textarea {
+    width: 448px;
+    height: 120px;
+    padding: 12px 16px;
+    &::placeholder {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 1.16;
+            letter-spacing: 0.01em;
+            color: rgba(117, 117, 117, 0.5);
+        }
+}
+
+
+.form-modal__input,
+.form-modal__textarea {
+    margin-top: 0;
+    margin-bottom: 0;
+    outline: 0;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: fill, border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-modal__input:hover,
+.form-modal__textarea:hover,
+.form-modal__input:focus,
+.form-modal__textarea:focus {
+    border: 1px solid $accent-color;
+    border-radius: 4px;
+}
+
+.form-modal__icon {
+    position: absolute;
+    top: 0;
+    left: 12px;
+    transform: translateY(160%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-modal__checkbox {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.form-modal__checkbox--input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    bottom: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.form-modal__checkbox--label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: $primary-color;
+@include flex(center, center, flex);
+}
+
+.form-modal__checkbox--icon::before {
+    content: " ";
+    display: block;
+    align-self: center;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $title-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    margin-right: 7px;
+}
+
+.form-modal__checkbox--input:checked+.form-modal__checkbox--label .form-modal__checkbox--icon::before {
+    content: " ";
+    width: 16px;
+    height: 15px;
+    background-color: $accent-color;
+    background-image: url("../images/check.svg");
+    background-size: contain;
+    background-origin: border-box;
+    border-radius: 2px;
+    border: 2px solid $accent-color;
+}
+
+.form-modal__checkbox--link {
+    text-decoration-line: underline;
+    color: $accent-color;
+}
+
+.form-modal__button {
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.8;
+@include flex(center, center, flex);
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: $white-color;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 52px;}

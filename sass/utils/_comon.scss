@@ -1,0 +1,26 @@
+%style-after::after{
+    content: '';
+        display: block;
+        width: 100%;
+        height: 3.75px;
+        background-color: $accent-color;
+        bottom: 0;
+        left: 0;
+        border-radius: 2px;
+}
+%hover-style:hover,
+%hover-style:focus{
+    color: $accent-color;
+}
+%flex-wrap{
+ display: flex;
+ flex-wrap: wrap;
+}
+@mixin flex($justify-content: center,
+    $align-items: center,
+    $display: flex)
+{
+    justify-content: $justify-content;
+    align-items: $align-items;
+    display: $display;
+}
