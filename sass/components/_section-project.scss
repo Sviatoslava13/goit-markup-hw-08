@@ -9,9 +9,7 @@
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
-display: flex;
-    flex-wrap: wrap;
-    width: 326px;
+
     &__button {
             border-radius: 4px;
             padding: 6px 24px;
@@ -23,14 +21,36 @@ display: flex;
             transition: color, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
 }
+ @media screen and (min-width:480px){
+    .filter-project{
+display: flex;
+    flex-wrap: wrap;
+    width: 326px;
+    }
+        .filter-project__item {
+            margin-right: 8px;}
+    .filter-project__item:nth-child(3n) {
+           margin-right: 0;
+       }
+ }
+  @media screen and (min-width:768px){
+.filter-project{
+    @include flex(center, center, flex);
+    text-align: center;
+    width: 575px;
+    margin: 0 auto;
+}
 .filter-project__item {
-margin-right: 8px;
+    margin-right: 8px;
+}
+ .filter-project__item:nth-child(5n) {
+     margin-right: 0;
+ }
+  }
+.filter-project__item {
 margin-bottom: 15px;
     border-radius: 4px;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-   &:nth-child(3n){
-    margin-right: 0;
-   }
   
 }
 .filter-project__item:hover,
@@ -52,14 +72,34 @@ margin-bottom: 15px;
 }
 .project-work__item {
     background-color: $white-color;
-    width: 450px;
+    
    
     border: 1px solid #eeeeee;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:not(:last-child){
-    margin-bottom: 30px;
-  }
+  
 }
+ @media screen and (min-width:480px){
+    .project-work__item{
+width: 450px;
+&:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    }
+ }
+  @media screen and (min-width:480px){
+    .project-work__item{
+        width: 354px;
+        margin-right: 15px;
+        &:not(:last-child){
+            margin-bottom: 30px;
+        }
+    }
+    .project-work{
+        flex-wrap: wrap;
+        display: flex;
+        margin-right: -15px;
+    }
+  }
 .project-work__item:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);

@@ -1,5 +1,74 @@
-/*client*/
 .client {
+    padding-top: 94px;
+    padding-bottom: 98px;
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 30px;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.16;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: $title-color;
+    }
+}
+@media screen and (min-width:480px){
+.client__list{
+    flex-wrap: wrap;
+    display: flex;
+}
+.client__item{
+    margin-right: 30px;
+    margin-bottom: 30px;
+    &:nth-child(3n+2) {
+            margin-right: 0;
+}
+}}
+.client__list {
+    @include flex(center, center, flex);
+}
+
+.client__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.client__link {
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    width: 170px;
+    height: 92px;
+    @include flex(center, center, flex);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+        border: 1px solid $accent-color;
+    }
+
+    &:focus {
+        border: 1px solid $accent-color;
+    }
+}
+
+.client__icon {
+    @include flex(center, center, flex);
+    fill: #afb1b8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.client__link:hover .client__icon,
+.client__link:focus .client__icon {
+    fill: $accent-color;
+}
+
+
+
+
+
+/*client*/
+/*.client {
     padding-top: 60px;
     padding-bottom: 60px;
     &__title {
@@ -15,21 +84,27 @@
             color: $title-color;
         }
 }
-.client__list {
-    @extend %flex-wrap;
-}
-.client__item{
-            margin-right: 30px;
-            margin-bottom: 30px;
-        
-}
- .client__item:nth-child(2n) {
-     margin-right: 0;
- }
+        .client__list {
+        @extend %flex-wrap;
+        justify-content: center;
+    }
+
+        @media screen and (min-width:480px) {  .client__item {
+      margin-right: 30px;
+        margin-bottom: 30px;
+
+    }
+
+    .client__item:nth-child(2n) {
+        margin-right: 0;
+    }
+    .client__link{
+        width: 210px;
+    }}
 .client__link {
     border: 1px solid #afb1b8;
     border-radius: 4px;
-    width: 210px;
+   
     height: 92px;
     @include flex(center, center, flex);
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -48,4 +123,4 @@
 .client__link:hover .client__icon,
 .client__link:focus .client__icon {
     fill: $accent-color;
-}
+}*/
