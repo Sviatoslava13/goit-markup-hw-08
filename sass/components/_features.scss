@@ -7,10 +7,12 @@
                 padding-bottom: 94px;
         }
     }
-   
-    
 }
-
+   @media screen and (min-width:480px){
+    .feature__list{
+      gap: 30px;
+    }
+   }
 .feature__content {
     background-color: #f5f4fa;
     border-radius: 4px;
@@ -28,21 +30,16 @@
         .feature__list {
         display: flex;
             flex-wrap: wrap;
-            margin-right: -30px;
+            gap: 30px;
         }
         .feature__item{
             width: 354px;
-            margin-right: 30px;
-            margin-bottom: 30px;
+     margin-bottom: 0;
         }
 }
  @media screen and (min-width:1200px) {
      .feature__item{ width: 270px;
-    margin-bottom: 0;
-    margin-right: 0;
-&:not(:last-child) {
-    margin-right: 30px;
-} 
+gap: 30px;
 }
  }
 .feature__icon {
