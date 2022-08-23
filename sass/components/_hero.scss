@@ -1,15 +1,50 @@
-.hero {
+.hero { max-width: 1600px;
+    height: 600px;
     margin: 0 auto;
     padding-top: 118px;
     padding-bottom: 118px;
     text-align: center;
     background-color: #2f303a;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-        url('../images/fon.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+ @media screen and (max-width: 767px) {
+     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)), url("../images/header-mb.jpg");
+@media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)), url("../images/header-mb2.jpg");
+    }
+ }
+ @media screen and (max-width: 1199px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)), url("../images/header-tab.jpg");
+     @media screen and (min-device-pixel-ratio: 2),
+     screen and (min-resolution: 192dpi),
+     screen and (min-resolution: 2dppx) {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)), url("../images/header-tab2.jpg");
+     }
+ }
+
+ @media screen and (min-width: 1200px) {
+background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)), url("../images/header-desk.jpg");
+     @media screen and (min-device-pixel-ratio: 2),
+     screen and (min-resolution: 192dpi),
+     screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)), url("../images/header-desk2.jpg");
+
+     }
+ }
+
+    @media screen and (min-width:1200px) {
+                padding-top: 200px;
+                padding-bottom: 200px;}
+ 
     &__title {max-width: 360px;
     margin: 0 auto;
             font-weight: 900;
@@ -19,43 +54,16 @@
             letter-spacing: 0.06em;
             text-transform: uppercase;
             color: $white-color;
+            @media screen and (min-width:1200px){
+max-width: 696px;
+    margin: 0 auto;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+            }
         }
-}
-@media screen and (min-width:1200px){
-    .hero{
-        padding-top: 200px;
-            padding-bottom: 200px;
-            &__title {
-                    max-width: 696px;
-                    margin: 0 auto;
-                    font-weight: 900;
-                        font-size: 44px;
-                        line-height: 1.36;
     }
-}}
         
-  @media screen and (min-width:480px) {
-      .hero__button {
-          width: 200px;
-      }
-  }
-@media screen and (min-width:1200px) {
-            .hero__button {
-            width: 216px;
-        }
-    }
-           @media screen and (min-width:1200px){
-            .backdrop__modal {
-                    min-width: 528px;
-                    min-height: 581px;}
-.form-modal__input {
-        width: 448px;}
-     .form-modal__textarea {
-     width: 448px; }
-                 .form-modal__checkbox--label {
-                     font-weight: 400;
-                     font-size: 14px;
-                     line-height: 1.71; } }
 
 .hero__button { border-radius: 4px;
     padding-top: 10px;
@@ -72,6 +80,11 @@
     color: $white-color;
     background-color: $accent-color;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (min-width:480px) {
+       width: 200px;
+        }
+        @media screen and (min-width:1200px) {
+                width: 216px;}
 }
 
 /*backdrop*/
@@ -93,6 +106,10 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @media screen and (min-width:1200px){
+            min-width: 528px;
+            min-height: 581px;
+        }
     }
 }
 
@@ -179,7 +196,9 @@
     padding-top: 11px;
     padding-bottom: 11px;
     padding-right: 30px;
-
+@media screen and (min-width:1200px) {
+        width: 448px;
+    }
     &:hover~.form-modal__icon {
         fill: $accent-color;
     }
@@ -193,7 +212,9 @@
     width: 370px;
     height: 120px;
     padding: 12px 16px;
-
+@media screen and (min-width:1200px){
+    width: 448px;
+}
     &::placeholder {
         font-weight: 400;
         font-size: 12px;
@@ -248,8 +269,13 @@
 
 .form-modal__checkbox--label {
     font-weight: 400;
-@media screen and (min-width:1200px){font-size: 12px;
-    line-height: 1.16;}
+    @media screen and (min-width:768px) {
+            font-size: 12px;
+            line-height: 1.16;
+        }
+@media screen and (min-width:1200px)
+{font-size: 14px;
+    line-height: 1.71;}
     letter-spacing: 0.03em;
     color: $primary-color;
     @include flex(center, center, flex);
