@@ -1,3 +1,4 @@
+
 .header {
     background-color: $white-color;
     border-bottom: 1px solid #ececec;
@@ -147,6 +148,9 @@ margin-right: 50px;
 
 .navigation-menu__button {
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
     margin-left: auto;
     border: 0;
     background-color: transparent;
@@ -218,6 +222,8 @@ margin-right: 50px;
 .social-menu__item {
     &:not(:last-child) {
         margin-right: 20px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+            transform: rotate(90deg);
     }
 }
 
