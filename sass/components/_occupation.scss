@@ -3,9 +3,7 @@
     .occupation {
     padding-bottom: 94px;
     @media screen and (max-width: 1199px) {
-            .occupation {
-                display: none;
-            }
+        display: none;
         }
     &__title {
             margin-top: 0;

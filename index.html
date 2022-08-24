@@ -84,8 +84,7 @@
    
   <main>
     <!--Эффектив-->
-  <section class="hero">
-      <div class="container">
+ <section class="hero">
         <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
         <button class="hero__button" type="button" data-modal-open>
           Замовити послугу
@@ -197,7 +196,7 @@
       </div>
     </section>
     <!--Чем мы занимаемся-->
-   <section class="occupation">
+  <section class="occupation">
       <div class="container">
         <h2 class="occupation__title">Чим ми займаємося</h2>
         <ul class="occupation__list">
@@ -373,7 +372,7 @@
         </ul>
       </div>
     </section>
-    <section class="client">
+  <section class="client">
       <div class="container">
         <h2 class="client__title">Постійні клієнти</h2>
         <ul class="client__list">
@@ -416,7 +415,8 @@
   <div class="container">
     <ul class="footer__list">
       <li class="footer__item footer__item--adress">
-        <a href="./index.html" class="logo">Web<span class="logos">Studio</span></a>
+      <div class="footer__navigation">  
+         <a href="./index.html" class="logo footer-logo">Web<span class="logos">Studio</span></a>
         <address class="address">
           <ul class="adress__list">
             <li class="adress__item">
@@ -431,9 +431,9 @@
               <a class="adress__link" href="mailto:+380961111111">+38 096 111 11 11</a>
             </li>
           </ul>
-        </address>
+        </address></div>
       </li>
-      <li class="footer__item footer__item--social">
+      <li class="footer__item footer__item--social"><div class="foter-meta>">
         <p class="social-networks__text">Приєднуйтесь</p>
         <ul class="social-networks">
           <li class="social-networks__item">
@@ -456,18 +456,16 @@
                 <use href="./images/icons.svg#linkedin" />
               </svg></a>
           </li>
-        </ul>
+        </ul></div>
       </li>
       <li class="footer__item--form">
-        <p class="footer-form__text">Підпишіться на розсилку</p>
+       <p class="footer-form__text">Підпишіться на розсилку</p>
         <form class="footer-form"> <label class="footer-form__label">
             <input class="footer-form__input" type="email" name="email" placeholder="E-mail" /></label>
-
-          <button class="footer-form__button" type="submit">Підписатися <svg class="footer-form__icon" width="24"
-              height="24">
-              <use href="./images/icons.svg#send" />
-            </svg></button>
         </form>
+        <button class="footer-form__button" type="submit">Підписатися <svg class="footer-form__icon" width="24" height="24">
+            <use href="./images/icons.svg#send" />
+          </svg></button>
       </li>
     </ul>
   </div>

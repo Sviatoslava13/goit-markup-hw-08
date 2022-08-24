@@ -3,7 +3,6 @@
     background-color: $white-color;
     border-bottom: 1px solid #ececec;
     position: relative;
-
     &__container {
         @include flex(center, center, flex);
 
@@ -17,7 +16,17 @@
     line-height: 1.19;
     text-decoration: none;
     color: $accent-color;
+    padding-top: 16px;
+    padding-bottom: 16px;
+@media screen and (min-width:768px) {
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
 
+    @media screen and (min-width:1200px) {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
     &__accent {
         color: #000000;
     }
@@ -43,6 +52,15 @@ margin-right: 50px;
     position: relative;
     padding-top: 32px;
     padding-bottom: 32px;
+    @media screen and (min-width:768px) {
+            padding-top: 21px;
+            padding-bottom: 21px;
+        }
+    
+        @media screen and (min-width:1200px) {
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
     display: block;
     font-weight: 500;
     font-size: 14px;
@@ -66,7 +84,6 @@ margin-right: 50px;
 
 .contacts {
     margin-left: auto;
-    @include flex(center, center, block);
 }
 
 .contacts__link {
@@ -79,7 +96,6 @@ margin-right: 50px;
     color: $primary-color;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     @extend %hover-style;
-
     &:hover .contacts__icon {
         fill: $accent-color;
     }
@@ -89,7 +105,15 @@ margin-right: 50px;
 
     }
 }
+  @media screen and (min-width:768px) and (max-width:1200px){
+.contacts__item:not(:last-child){
+    margin-bottom: 10px;
+}
+.contacts{
+    display: flex;
 
+justify-content: center;
+}}
 .contacts__icon {
     margin-right: 8px;
     fill: $primary-color;
@@ -115,9 +139,6 @@ margin-right: 50px;
     }
 
     .contacts {
-        display: flex;
-        flex-direction: column;
-        align-items: baseline;
 
         &__item {
             margin-right: 0;
