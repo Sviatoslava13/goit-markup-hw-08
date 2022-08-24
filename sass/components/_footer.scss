@@ -6,12 +6,12 @@
     background-color: #2f303a;
     text-align: center;
 }
-/*.footer__navigation{
-    @media screen and (min-width:480px){
-        display: block;
+.footer-navigation{
+    @media screen and (min-width:1200px){
+     display: flex;
     }
 }
-.footer-meta {
+/*.footer-meta {
     @media screen and (min-width:480px) {
         display: block;
 justify-content: center;
@@ -31,7 +31,17 @@ align-items: center;
    
 
  }*/
- 
+ .footer__list{ 
+    @media screen and (min-width:768px) and (max-width:1199px){
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: calc((100% - 10px) / 2);
+    justify-content: space-around;
+ }
+ @media screen and (min-width:1200px){
+display: flex;
+ }
+ }
 .footer__item {
     margin-bottom: 60px;
     @media screen and (min-width:480px) {
@@ -54,7 +64,7 @@ align-items: center;
     .social-networks {
         @include flex(center, center, flex);
         margin-bottom: 37px;
-
+    
        /* &__text {
             max-width: 116px;
             font-weight: 700;
@@ -72,12 +82,18 @@ align-items: center;
         }
     }
 .footer__item--form{
+    
     @media screen and (max-width:1199px) {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-evenly;
         }
+     @media screen and (min-width:1200px){
+display: flex;
+flex-wrap: wrap;
+
+                }
 }
 .footer-form_nav{
     @media screen and (min-width:480px) {
@@ -182,6 +198,10 @@ align-items: center;
             color: $white-color;
             margin-bottom: 20px;
             margin-top: 0;
+            display: block;
+            @media screen and (min-width:1200px) {
+                flex-basis: 100%;
+            }
     }
 }
 
