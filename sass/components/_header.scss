@@ -121,17 +121,13 @@ margin-right: 50px;
 
         &__item {
             margin-right: 0;
-        }
-
-        &__item:not(:last-child) {
-            margin-bottom: 10px;
+          
         }
     }
 }
 
 @media screen and (min-width: 1200px) {
     .contacts {
-        flex-direction: row;
         margin-left: auto;
         @include flex(center, center, flex);
 

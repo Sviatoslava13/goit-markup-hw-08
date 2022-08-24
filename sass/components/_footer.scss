@@ -6,27 +6,23 @@
     background-color: #2f303a;
     text-align: center;
  &__list{
-    @media screen and(max-width:767px) {
-            flex-direction: column;
-            margin-bottom: 60px;
+    @media screen and (min-width: 768px) {
+            &__container {
+                display: flex;
+                flex-wrap: wrap;
+    
+    
+            }
         }
     
-        @media screen and (min-width:768px) and (max-width:1200px) {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+        @media screen and (min-width: 1200px) {
+            &__container {
+                flex-wrap: nowrap;
+                align-items: baseline;
     
+    
+            }
         }
-    
-        @media screen and(max-width:1200px) {
-            text-align: center;
-        }
-    
-        @media screen and(min-width:1200px) {
-            display: flex;
-    
-        }
- }
   &__item {
 
       @media screen and(max-width:1200px) {
@@ -68,6 +64,7 @@
 
     @media screen and (min-width: 768px) {
         margin-left: 76px;
+        display: flex;
     }
 
     @media screen and (min-width: 1200px) {
@@ -76,6 +73,11 @@
         text-align: left;
     }
 }
+.footer__item--adress .footer__item--social{
+    @media screen and (min-width: 768px){
+        justify-content: space-around;
+        display: flex;
+}}
 .footer__item{
     display: flex;
         flex-direction: column;
