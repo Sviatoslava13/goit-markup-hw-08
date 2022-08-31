@@ -61,10 +61,10 @@
     <div class="header__model">
       <ul class="navigation__list">
         <li class="navigation__item">
-          <a class="navigation__link navigation__link--current" href="./index.html">Студія</a>
+          <a class="navigation__link" href="./index.html">Студія</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="./portfolio.html">Портфоліо</a>
+          <a class="navigation__link navigation__link--current" href="./portfolio.html">Портфоліо</a>
         </li>
         <li class="navigation__item"><a class="navigation__link" href="">Контакти</a></li>
       </ul>
@@ -337,12 +337,13 @@
       </section>
     </main>
     <!--Футер-->
- <footer class="footer">
-      <div class="container">
-        <ul class="footer__list">
-          <li class="footer__item">
-           <div class="footer__navigation"> <a href="./index.html" class="logo">Web<span class="logos">Studio</span></a>
-            <address class="address">
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer__list">
+        <li class="footer__item footer__item--adress">
+          <div class="footer__navigation">
+            <a href="./index.html" class="logo footer-logo">Web<span class="logos">Studio</span></a>
+            <address class="adress">
               <ul class="adress__list">
                 <li class="adress__item">
                   <a class="adress__map" href="" target="_blank" rel="noopener noreferrer">
@@ -356,9 +357,11 @@
                   <a class="adress__link" href="mailto:+380961111111">+38 096 111 11 11</a>
                 </li>
               </ul>
-            </address></div>
-          </li>
-          <li class="footer__item">
+            </address>
+          </div>
+        </li>
+        <li class="footer__item footer__item--social">
+          <div class="foter-meta>">
             <p class="social-networks__text">Приєднуйтесь</p>
             <ul class="social-networks">
               <li class="social-networks__item">
@@ -382,21 +385,29 @@
                   </svg></a>
               </li>
             </ul>
-          </li>
-          <li class="footer__item--form">
-            <p class="footer-form__text">Підпишіться на розсилку</p>
-            <form class="footer-form"> <label class="footer-form__label">
-                <input class="footer-form__input" type="email" name="email" placeholder="E-mail" /></label>
-    
-              <button class="footer-form__button" type="submit">Підписатися <svg class="footer-form__icon" width="24"
-                  height="24">
-                  <use href="./images/icons.svg#send" />
-                </svg></button>
+          </div>
+        </li>
+        <li class="footer__item--form">
+          <p class="footer-form__text">Підпишіться на розсилку</p>
+          <div class="footer__meta">
+            <form class="footer-form">
+              <label class="footer-form__label">
+                <input class="footer-form__input" type="email" name="email" placeholder="E-mail" />
+              </label>
+  
             </form>
-          </li>
-        </ul>
-      </div>
-    </footer>
+  
+            <button class="footer-form__button" type="submit">
+              Підписатися
+              <svg class="footer-form__icon" width="24" height="24">
+                <use href="./images/icons.svg#send" />
+              </svg>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </footer>
     <script class="mobile-container__js" src="./js/mobile-menu.js"></script>
   </body>
 </html>

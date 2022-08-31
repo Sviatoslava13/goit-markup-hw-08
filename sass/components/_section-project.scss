@@ -10,10 +10,13 @@
 .filter-project {
   margin-top: 0;
   margin-bottom: 35px;
-  @include flex(center, center, flex);
+@media screen and (max-width: 768px){
+  display: flex;
+}
   flex-wrap: wrap;
 @media screen and (min-width: 768px) {
 margin-bottom: 30px;
+  @include flex(center, center, flex);
 }
 @media screen and (min-width:1200px) {
     margin-bottom: 50px;
@@ -42,9 +45,9 @@ margin-bottom: 30px;
   border-radius: 4px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   @media screen and (max-width: 767px) {
-   /* &:not(:last-child){
+    &:not(:last-child){
         margin-bottom: 15px;
-    }*/
+    }
   }
 }
 
