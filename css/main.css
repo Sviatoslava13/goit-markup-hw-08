@@ -249,6 +249,7 @@
 }
 .header__mobile.is-open {
   display: flex;
+  flex-wrap: wrap;
   z-index: 1;
 }
 @media screen and (min-width: 768px) {
@@ -261,6 +262,7 @@
   margin-top: auto;
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 @media screen and (min-width: 768px) {
   .social-menu {
@@ -920,7 +922,7 @@
 }
 @media screen and (max-width: 767px) {
   .team__item {
-    width: 450px;
+    max-width: 450px;
   }
   .team__item:not(:last-child) {
     margin-bottom: 30px;
