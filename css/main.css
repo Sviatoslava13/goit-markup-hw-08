@@ -751,11 +751,6 @@
 }
 
 @media screen and (max-width: 767px) {
-  .feature__item {
-    max-width: 450px;
-    margin-right: auto;
-    margin-left: auto;
-  }
   .feature__item:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -776,7 +771,6 @@
 @media screen and (min-width: 768px) {
   .feature__list {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
   }
@@ -1369,7 +1363,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
