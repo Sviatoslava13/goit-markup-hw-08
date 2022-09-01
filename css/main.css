@@ -752,7 +752,7 @@
 
 @media screen and (max-width: 767px) {
   .feature__item {
-    width: 450px;
+    max-width: 450px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -776,7 +776,6 @@
 @media screen and (min-width: 768px) {
   .feature__list {
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
