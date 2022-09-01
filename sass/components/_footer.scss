@@ -6,6 +6,9 @@
     background-color: #2f303a;
     text-align: center;
 }
+.footer-logo{
+    padding: 0;
+}
 
 .footer__navigation {
     @media screen and (min-width:1200px) {
@@ -30,12 +33,12 @@
 }
 
 .footer__item {
-    margin-bottom: 60px;
     @media screen and (max-width:768px) {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
+        margin-bottom: 60px;
     }
 }
 .adress__list {
@@ -82,13 +85,15 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
+            margin-top: 60px;
+            
     }
 
     @media screen and (min-width:1200px) {
         display: flex;
         flex-wrap: wrap;
         height: 100px;
-        margin-top: 20px;
+        margin-top: 12px;
 margin-left: 93px;
     }
 }
@@ -110,6 +115,11 @@ margin-left: 93px;
     margin-left: 12px;
     @include flex(center, center, flex);
     text-align: center;
+}
+.footer__item--social{
+    @media screen and(min-width:1200px){
+        margin-top: 12px;
+    }
 }
 .social-networks {
 
