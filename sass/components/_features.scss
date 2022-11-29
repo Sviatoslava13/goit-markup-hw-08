@@ -1,10 +1,8 @@
 .feature {
-  padding-top: 60px;
-  padding-bottom: 60px;
-@media screen and (min-width:1200px) {
-      padding-top: 94px;
-      padding-bottom: 94px;
-    }
+  padding: 60px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 }
 .feature__content {
   background-color: #f5f4fa;
@@ -14,7 +12,6 @@
 }
 .feature__item {
   @media screen and (max-width: 767px) {
-
     &:not(:last-child) {
       margin-bottom: 30px;
     }
@@ -25,14 +22,12 @@
   }
   @media screen and (min-width: 1200px) {
     width: 270px;
-
     margin-bottom: 0;
   }
 }
 .feature__list {
   @media screen and (min-width: 768px) {
     display: flex;
-  
     flex-wrap: wrap;
     gap: 30px;
   }
@@ -54,9 +49,9 @@
   text-transform: uppercase;
   color: $title-color;
   text-align: center;
-@media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     text-align: left;
-}
+  }
 }
 
 .feature__text {

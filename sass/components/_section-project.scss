@@ -1,26 +1,22 @@
 .section-project {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
   @media screen and (min-width: 1200px) {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding: 94px 0;
   }
 }
 
 .filter-project {
   margin-top: 0;
   margin-bottom: 35px;
-@media screen and (max-width: 768px){
-  display: flex;
-}
   flex-wrap: wrap;
-@media screen and (min-width: 768px) {
-margin-bottom: 30px;
-  @include flex(center, center, flex);
-}
-@media screen and (min-width:1200px) {
+  display: flex;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+    @include flex(center, center, flex);
+  }
+  @media screen and (min-width: 1200px) {
     margin-bottom: 50px;
-}
+  }
   &__button {
     border-radius: 4px;
     padding: 6px 24px;
@@ -37,7 +33,7 @@ margin-bottom: 30px;
   &:not(:last-child) {
     margin-right: 8px;
   }
-  &:nth-child(3n){
+  &:nth-child(3n) {
     margin-right: 16px;
   }
   align-items: flex-start;
@@ -45,8 +41,8 @@ margin-bottom: 30px;
   border-radius: 4px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   @media screen and (max-width: 767px) {
-    &:not(:last-child){
-        margin-bottom: 15px;
+    &:not(:last-child) {
+      margin-bottom: 15px;
     }
   }
 }
@@ -70,10 +66,10 @@ margin-bottom: 30px;
   &__link {
     text-decoration: none;
   }
-        @media screen and (max-width: 767px) {
-          margin-left: auto;
-            margin-right: auto;
-        }
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .project-work__item {
@@ -132,9 +128,6 @@ margin-bottom: 30px;
 
 .project-work__content {
   padding: 20px 24px;
-  /* @media screen and (min-width:768px){
-        width: 354px;
-    }*/
 }
 
 .project-work__text {
